@@ -9,3 +9,9 @@ body {
     margin: 0;
     background: linear-gradient(to right, #2f73c2, #c3c52f );
 }
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
