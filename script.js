@@ -18,23 +18,33 @@ class Calculator {
     }
 
     appendNumber(number) {
-        this.currentOperand = number
+        if (number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toString() + number.toString()
 
 
     }
 
     chooseOperation(operation) {
+        if (this.currentOperand === '') return
+        if (this.previousOperand !== '') {
+            this.compute()
+
+            }
+        this.operation = operation 
+        this.previousOperand = this.currentOperand
+        this.currentOperand = ''
 
 
     }
 
-    computer() {
+    compute() {
 
 
     }
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand
+        this.previousOperandTextElement.innerText = this.previousOperand
 
 
     }
@@ -60,3 +70,10 @@ numberButtons.forEach(button => {
 })
 
 
+operationButtons.forEach(button => { 
+    button.addEventListener('click', () => {
+        calculator.chooseOperation(button.innerText)
+        calculator.updateDisplay()
+    })
+    
+})
