@@ -5,4 +5,4 @@
 ## How to ##
 
 Application is published on `Netlify` 
-You can visit and test it here: [link]https://elaborate-gecko-7ee072.netlify.app/. 
+You can visit and test it here: [link](https://elaborate-gecko-7ee072.netlify.app/). 
